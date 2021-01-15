@@ -1,0 +1,30 @@
+<div class="dashboard-section user-statistic-block">
+  <div class="user-statistic">
+    <h3><i class="fas fa-chart-pie"></i> 132</h3>
+    <span>Companies Viewed</span>
+  </div>
+  <div class="user-statistic">
+    <h3><i class="fas fa-briefcase"></i> 12</h3>
+    <span>Applied Jobs</span>
+  </div>
+  <div class="user-statistic">
+    <h3><i class="fas fa-heart"></i>32</h3>
+    <span>Favourite Jobs</span>
+  </div>
+</div>
+<div class="dashboard-section dashboard-view-chart">
+  <canvas id="view-chart" width="400" height="200"></canvas>
+</div>
+<div class="dashboard-section dashboard-recent-activity">
+  <h4 class="title">Recent Activity</h4>
+  <div *ngFor="let activity of activities" class="activity-list">
+    <i [class]="activity.type"></i>
+    <div class="content">
+      <h5>{{ activity.title }}</h5>
+      <span class="time">{{ activity.time }}</span>
+    </div>
+    <div class="close-activity">
+      <i class="fas fa-times" (click)="markAsRead(activity.id)"></i>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<div class="dashboard-message-wrapper">
+  <div class="message-lists">
+    <form
+      [formGroup]="messageSearchForm"
+      class="message-search"
+      (ngSubmit)="Search(messageSearchForm.value)"
+    >
+      <input
+        type="text"
+        formControlName="messageSearch"
+        placeholder="Search Friend..."
+      />
+      <button><i class="fas fa-search"></i></button>
+    </form>
+    <a href="#" class="message-single">
+      <div class="thumb">
+        <img src="assets\images\user-1.jpg" class="img-fluid" alt="" />
+      </div>
+      <div class="body">
+        <h6 class="username">Laura Cormier</h6>
+        <span class="text-number">2</span>
+      </div>
+    </a>
+    <a href="#" class="message-single">
+      <div class="thumb">
+        <img src="assets\images\user-2.jpg" class="img-fluid" alt="" />
+      </div>
+      <div class="body">
+        <h6 class="username">Paul Cox</h6>
+        <span class="send-time">2 min</span>
+      </div>
+    </a>
+    <a href="#" class="message-single active">
+      <div class="thumb">
+        <img src="assets\images\user-3.jpg" class="img-fluid" alt="" />
+      </div>
+      <div class="body">
+        <h6 class="username">Carlos Dobson</h6>
+        <span class="send-time">6 min</span>
+      </div>
+    </a>
+    <a href="#" class="message-single">
+      <div class="thumb">
+        <img src="assets\images\user-4.jpg" class="img-fluid" alt="" />
+      </div>
+      <div class="body">
+        <h6 class="username">Dahlia Divers</h6>
+        <span class="send-time">45 min</span>
+      </div>
+    </a>
+  </div>
+  <div class="message-box">
+    <div class="message-box-header">
+      <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+      <h5>Carlos Dobson</h5>
+    </div>
+    <ul class="dashboard-conversation">
+      <li class="conversation in">
+        <div class="avater">
+          <img src="assets\images\avater-1.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="message">
+          <span
+            >Can we go inside? I feel like my toes are starting to go
+            numb.</span
+          >
+        </div>
+        <span class="send-time">2.32 am</span>
+      </li>
+      <li class="conversation out">
+        <div class="avater">
+          <img src="assets\images\avater-2.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="message">
+          <span
+            >Can we go inside? I feel like my toes are starting to go
+            numb.</span
+          >
+        </div>
+        <span class="send-time">2.32 am</span>
+      </li>
+      <li class="conversation in">
+        <div class="avater">
+          <img src="assets\images\avater-1.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="message">
+          <span>Hi, Luke! How are you? Can you please stop</span>
+        </div>
+        <span class="send-time">2.34 am</span>
+      </li>
+      <li class="conversation out">
+        <div class="avater">
+          <img src="assets\images\avater-2.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="message">
+          <span
+            >Hi, Luke! How are you? Can you please stop and pick up extra paper
+            for the computer ?</span
+          >
+        </div>
+        <span class="send-time">2.34 am</span>
+      </li>
+      <li class="conversation in">
+        <div class="avater">
+          <img src="assets\images\avater-1.jpg" class="img-fluid" alt="" />
+        </div>
+        <div class="message file-send">
+          <div class="images">
+            <img src="assets\images\avater-1.jpg" class="img-fluid" alt="" />
+            <img src="assets\images\avater-1.jpg" class="img-fluid" alt="" />
+            <img src="assets\images\avater-1.jpg" class="img-fluid" alt="" />
+            <span class="more">+12</span>
+          </div>
+        </div>
+        <span class="send-time">2.34 am</span>
+      </li>
+    </ul>
+    <div class="conversation-write-wrap">
+      <form
+        [formGroup]="messageForm"
+        (ngSubmit)="onClickSubmit(messageForm.value)"
+      >
+        <label class="send-file">
+          <input formControlName="file" type="file" /><i
+            class="fas fa-paperclip"
+          ></i>
+        </label>
+        <label class="send-image">
+          <input formControlName="image" type="file" /><i
+            class="fas fa-images"
+          ></i>
+        </label>
+        <textarea
+          formControlName="message"
+          placeholder="Type a message"
+        ></textarea>
+        <a href="#" class="emoji"><i class="fas fa-thumbs-up"></i></a>
+        <button class="send-message">
+          <i class="fas fa-share-square"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

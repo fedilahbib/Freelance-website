@@ -1,0 +1,118 @@
+<div
+  class="modal fade"
+  id="modal-skill"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="title">
+          <h4><i class="fas fa-code-branch"></i>MY SKILL</h4>
+          <a href="#" class="add-more">+ Add Skills</a>
+        </div>
+        <div class="content">
+          <form
+            [formGroup]="skillForm"
+            (ngSubmit)="onClickSubmit(skillForm.value)"
+          >
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Type Skills</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">01</div>
+                  </div>
+                  <input
+                    formControlName="skill1"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">02</div>
+                  </div>
+                  <input
+                    formControlName="skill2"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">03</div>
+                  </div>
+                  <input
+                    formControlName="skill3"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">04</div>
+                  </div>
+                  <input
+                    formControlName="skill4"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">05</div>
+                  </div>
+                  <input
+                    formControlName="skill5"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">06</div>
+                  </div>
+                  <input
+                    formControlName="skill6"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="buttons">
+                  <button class="primary-bg">Save Update</button>
+                  <button class="" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

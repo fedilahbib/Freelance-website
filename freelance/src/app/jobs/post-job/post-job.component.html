@@ -1,0 +1,300 @@
+<!-- Breadcrumb -->
+<div class="alice-bg padding-top-70 padding-bottom-70">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="breadcrumb-area">
+          <h1>Post A Job</h1>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="breadcrumb-form">
+          Enter Keywords
+          <!--  <form action="#">
+                <input type="text" placeholder="Enter Keywords">
+                <button><i data-feather="search"></i></button>
+              </form>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumb End -->
+
+<div class="alice-bg section-padding-bottom">
+  <div class="container no-gliters">
+    <div class="row no-gliters">
+      <div class="col">
+        <div class="post-container">
+          <div class="post-content-wrapper">
+
+ 
+            <form [formGroup]="applyJobForm"class="job-post-form" (ngSubmit)="onClickSubmit(applyJobForm.value)">
+
+                  <div class="basic-info-input">
+                    <h4><i class="fas fa-plus-circle"></i>Post A Job</h4>
+                    <div id="job-title" class="form-group row">
+                      <label class="col-md-3 col-form-label">Job Title</label>
+                      <div class="col-md-9">
+                        <input type="text" formControlName="title" class="form-control" placeholder="Your job title here">
+                      </div>
+                    </div>
+                    <div id="job-summery" class="row">
+                      <label class="col-md-3 col-form-label">Job Summery</label>
+                      <div class="col-md-9">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                     
+                                      <select class="form-control"   (change)="changeLocation($event)" formControlName="Category">
+                                        <option value="" disabled>Location</option>
+                                        <option *ngFor="let loc of location " [ngValue]="loc">{{loc}}</option>
+                                      </select>
+
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" formControlName="location1" class="form-control" placeholder="Job Location">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                             
+                            
+
+                                      <select class="form-control"   (change)="changeLocation($event)" formControlName="job1">
+                                        <option value="" disabled>Job</option>
+                                        <option *ngFor="let job  of jobs" [ngValue]="job">{{job}}</option>
+                                      </select>
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                             
+   
+                              <select class="form-control"   (change)="changeLocation($event)" formControlName="job2">
+                                        <option value="" disabled>Experience (Optional)</option>
+                                        <option *ngFor="let exp of experience" [ngValue]="exp">{{exp}}</option>
+                                      </select>
+
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text"  formControlName="salary"  class="form-control" placeholder="Salary Range">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                        
+                              <select class="form-control"   (change)="changeLocation($event)" formControlName="qualification1">
+                                       
+                                <option value="" disabled>Qualification (Optional)</option>
+                                
+                                <option *ngFor="let qual of qualification" [ngValue]="qual">{{qual}}</option>
+                                
+                              </select>
+
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+
+
+                              <select class="form-control"   (change)="changeLocation($event)" formControlName="qualification2">
+                                       
+                                <option value="" disabled>Gender</option>
+                                
+                                <option *ngFor="let gen of gender" [ngValue]="gen">{{gen}}</option>
+                                
+                              </select>
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text"  formControlName="form1"   class="form-control">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group datepicker">
+                              <input type="date" formControlName="form2"   class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="job-description" class="form-group row">
+                      <label class="col-md-3 col-form-label">Job Description</label>
+                      <div class="col-md-9">
+                        <textarea formControlName="jobDescription" id="mytextarea"  class=" form-control tinymce-editor tinymce-editor-1" placeholder="Description text here"></textarea>
+                      </div>
+                    </div>
+                    <div id="response" class="form-group row">
+                      <label class="col-md-3 col-form-label">Responsibilities</label>
+                      <div class="col-md-9">
+                        <textarea formControlName="Responsibilities" id="mytextarea2" class="form-control tinymce-editor tinymce-editor-2" placeholder="Responsibilities (Optional)"></textarea>
+                      </div>
+                    </div>
+                    <div id="education" class="form-group row">
+                      <label class="col-md-3 col-form-label">Education</label>
+                      <div class="col-md-9">
+                        <textarea formControlName="Education" id="mytextarea3" class=" form-control tinymce-editor tinymce-editor-2" placeholder="Education (Optional)"></textarea>
+                      </div>
+                    </div>
+                    <div id="others" class="form-group row">
+                      <label class="col-md-3 col-form-label">Other Benefits</label>
+                      <div class="col-md-9">
+                        <textarea formControlName="Benefits" id="mytextarea4" class="form-control tinymce-editor tinymce-editor-2" placeholder="Description text here"></textarea>
+                      </div>
+                    </div>
+                    <div id="post-location" class="form-group row">
+                      <label class="col-md-3 col-form-label">Your Location</label>
+                      <div class="col-md-9">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                          
+
+
+                                       
+                              <select class="form-control" (change)="changeLocation($event)" formControlName="location2">
+                 
+                                         
+                                <option value="" disabled>Location</option>
+  
+                                            
+                                <option *ngFor="let loca of location" [ngValue]="loca">{{loca}}</option>
+
+                                       
+                              </select>
+
+
+
+
+
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="form-group">
+                          
+                              <select class="form-control" id="exampleFormControlSelect11" (change)="changeCategory($event)" formControlName="category">             
+ 
+                                <option value="" disabled>Category</option>
+ 
+                                <option *ngFor="let cat of category" [ngValue]="cat">{{cat}}</option>
+ 
+                              </select>
+
+
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="form-group">
+                              <input type="text"  formControlName="zip" class="form-control" placeholder="Zip Code">
+                            </div>
+                            <div class="form-group">
+                              <input type="text"  class="form-control" formControlName="location2"  placeholder="Your Location">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                      
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="about-company" class="row">
+                      <label class="col-md-3 col-form-label">About Company</label>
+                      <div class="col-md-9">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text"  formControlName="companyName" class="form-control" placeholder="Company Name">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" formControlName="webAddress" class="form-control" placeholder="Web Address">
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea class="form-control"  formControlName="companyProfile" placeholder="Company Profile"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="package" class="row">
+                      <label class="col-md-3 col-form-label">Select Package</label>
+                      <div class="col-md-9">
+                        <div class="package-select">
+                          <div class="package-select-inputs">
+                            <div class="form-group">
+                              <input  formControlName="radio" class="custom-radio" type="radio" id="radio_1" name="radio" value="1" checked="">
+                              <label for="radio_1">
+                              <span class="dot"></span> <span class="package-type">Free</span> $0.00
+                            </label>
+                            </div>
+                            <div class="form-group">
+                              <input  formControlName="radio" class="custom-radio" type="radio" id="radio_2" name="radio" value="2">
+                              <label for="radio_2">
+                              <span class="dot"></span> <span class="package-type">Stater</span> $22.00
+                            </label>
+                            </div>
+                            <div class="form-group">
+                              <input class="custom-radio" formControlName="radio" type="radio" id="radio_3" name="radio" value="3">
+                              <label for="radio_3">
+                              <span class="dot"></span> <span class="package-type">Advance</span> $44.00
+                            </label>
+                            </div>
+                          </div>
+                          <div class="payment-method">
+                            <a href="#" class="credit active"><i class="fas fa-credit-card"></i>Credit Card</a>
+                            <a href="#" class="paypal"><i class="fab fa-cc-paypal"></i>PayPal</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9 offset-md-3">
+                        <div class="form-group terms">
+                          <input class="custom-radio" formControlName="radio_4" type="checkbox" id="radio-4" name="termsandcondition">
+                          <label for="radio-4">
+                            <span class="dot"></span> You accepts our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label"></label>
+                      <div class="col-md-9">
+                        <button class="button">Post Your Job</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+          </div>
+          <div class="post-sidebar">
+            <h5><i class="fas fa-arrow-down"></i>Navigation</h5>
+            <ul class="sidebar-menu">
+              <li><a href="#job-title">Job Title</a></li>
+              <li><a href="#job-summery">Job Summary</a></li>
+              <li><a href="#job-description">Job Descruption</a></li>
+              <li><a href="#response">Responsibilities</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#others">Your Location</a></li>
+              <li><a href="#post-location">About Company</a></li>
+              <li><a href="#package">Select Package</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

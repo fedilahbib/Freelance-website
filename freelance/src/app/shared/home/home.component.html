@@ -1,0 +1,369 @@
+
+  <!-- Modal -->
+  <div class="account-entry">
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i data-feather="user"></i>Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i data-feather="edit"></i>Registration</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="account-type">
+              <label for="idRegisterCan">
+                <input id="idRegisterCan" type="radio" name="register">
+                <span>Candidate</span>
+              </label>
+              <label for="idRegisterEmp">
+                <input id="idRegisterEmp" type="radio" name="register">
+                <span>Employer</span>
+              </label>
+            </div>
+            <div class="shortcut-login">
+              <span>Or connect with</span>
+              <div class="buttons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
+                <a href="#" class="google"><i class="fab fa-google"></i>Google</a>
+              </div>
+              <p>Already have an account? <a href="#">Login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Banner -->
+  <div class="banner banner-2 banner-2-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="banner-content">
+            <h1>Find the right job</h1>
+            <p>Create free account to find thousands Jobs, Employment & Career Opportunities around you!</p>
+            <div class="short-infos">
+              <div class="info">
+                <h4>5,862</h4>
+                <span>Jobs Posted</span>
+              </div>
+              <div class="info">
+                <h4>240</h4>
+                <span>Companies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Banner End -->
+
+  <!-- Search and Filter -->
+  <div class="searchAndFilter-wrapper-2">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="searchAndFilter-block">
+            <div class="searchAndFilter searchAndFilter-2">
+             
+                <form [formGroup]="searchForm" (ngSubmit)="onClickSubmit(searchForm.value)" class="search-form">
+                <input type="text" placeholder="Enter Keywords" formControlName="keywords"> 
+              
+                <select class="selectpicker" id="search-location" (change)="changeLocation($event)" formControlName="location">
+                  <option value="" disabled>Location</option>
+  
+                  <option *ngFor="let loca of location" [ngValue]="loca">{{loca}}</option>
+
+              
+                </select>
+               
+                <select class="selectpicker" id="search-category" (change)="changeCategory($event)" formControlName="category">             
+                  <option value="" disabled>Category</option>
+                  <option *ngFor="let cat of category" [ngValue]="cat">{{cat}}</option>
+                </select>
+                <button class="button"><i class="fas fa-search"></i>Search Job</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Search and Filter End -->
+
+  <!-- Category -->
+  <div class="padding-bottom-60">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="categories">
+            <div class="category">
+
+              <div class="icon">    
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Accounting / Finance<span>(233)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+                            
+              </div>
+              <h5><a href="job-listing.html">Education<span>(45)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Design & Creative<span>(147)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Health Care<span>(87)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Engineer & Architects<span>(367)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Marketing & Sales<span>(41)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Garments / Textile<span>(126)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Customer Support<span>(161)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Digital Media<span>(69)</span></a></h5>
+            </div>
+            <div class="category">
+              <div class="icon">
+                <img src="assets/images/cat1.png" alt="category">
+              </div>
+              <h5><a href="job-listing.html">Telecommunication<span>(92)</span></a></h5>
+            </div>
+            <span class="vr vr-1"></span>
+            <span class="vr vr-2"></span>
+            <span class="vr vr-3"></span>
+            <span class="vr vr-4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Category End -->
+
+  <!-- Jobs -->
+  <div class="section-padding alice-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="section-header section-header-2 section-header-with-right-content">
+            <h2>Recent Jobs</h2>
+            <a href="job-listing.html" class="header-right">+ Browse All Jobs</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="job-list">
+            <div class="thumb">
+              <a href="#">
+                <img src="assets\images\job\company-logo-1.png" class="img-fluid" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <div class="content">
+                <h4><a href="job-details.html">Designer Required</a></h4>
+                <div class="info">
+                  <span class="company"><a href="#"><i class="fas fa-briefcase"></i>Theoreo</a></span>
+                  <span class="office-location"><a href="#"><i class="fas fa-map-pin"></i>New York City</a></span>
+                  <span class="job-type full-time"><a href="#"><i class="far fa-clock"></i>Full Time</a></span>
+                </div>
+              </div>
+              <div class="more">
+                <div class="buttons">
+                  <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Apply Now</a>
+                  <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+                </div>
+                <p class="deadline">Deadline: Oct 31, 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="job-list">
+            <div class="thumb">
+              <a href="#">
+                <img src="assets\images\job\company-logo-2.png" class="img-fluid" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <div class="content">
+                <h4><a href="job-details.html">Project Manager</a></h4>
+                <div class="info">
+                  <span class="company"><a href="#"><i class="fas fa-briefcase"></i>Degoin</a></span>
+                  <span class="office-location"><a href="#"><i class="fas fa-map-pin"></i>San Francisco</a></span>
+                  <span class="job-type part-time"><a href="#"><i class="far fa-clock"></i>Part Time</a></span>
+                </div>
+              </div>
+              <div class="more">
+                <div class="buttons">
+                  <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Apply Now</a>
+                  <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+                </div>
+                <p class="deadline">Deadline: Oct 31, 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="job-list">
+            <div class="thumb">
+              <a href="#">
+                <img src="assets\images\job\company-logo-8.png" class="img-fluid" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <div class="content">
+                <h4><a href="job-details.html">Restaurant Team Member - Crew </a></h4>
+                <div class="info">
+                  <span class="company"><a href="#"><i class="fas fa-briefcase"></i>Geologitic</a></span>
+                  <span class="office-location"><a href="#"><i class="fas fa-map-pin"></i>New Orleans</a></span>
+                  <span class="job-type temporary"><a href="#"><i class="far fa-clock"></i>Temporary</a></span>
+                </div>
+              </div>
+              <div class="more">
+                <div class="buttons">
+                  <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Apply Now</a>
+                  <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+                </div>
+                <p class="deadline">Deadline: Oct 31, 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="job-list">
+            <div class="thumb">
+              <a href="#">
+                <img src="assets\images\job\company-logo-9.png" class="img-fluid" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <div class="content">
+                <h4><a href="job-details.html">Nutrition Advisor</a></h4>
+                <div class="info">
+                  <span class="company"><a href="#"><i class="fas fa-briefcase"></i>Theoreo</a></span>
+                  <span class="office-location"><a href="#"><i class="fas fa-map-pin"></i>New York City</a></span>
+                  <span class="job-type full-time"><a href="#"><i class="far fa-clock"></i>Full Time</a></span>
+                </div>
+              </div>
+              <div class="more">
+                <div class="buttons">
+                  <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Apply Now</a>
+                  <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+                </div>
+                <p class="deadline">Deadline: Oct 31, 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="job-list">
+            <div class="thumb">
+              <a href="#">
+                <img src="assets\images\job\company-logo-10.png" class="img-fluid" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <div class="content">
+                <h4><a href="job-details.html">UI Designer</a></h4>
+                <div class="info">
+                  <span class="company"><a href="#"><i class="fas fa-briefcase"></i>Degoin</a></span>
+                  <span class="office-location"><a href="#"><i class="fas fa-map-pin"></i>San Francisco</a></span>
+                  <span class="job-type part-time"><a href="#"><i class="far fa-clock"></i>Part Time</a></span>
+                </div>
+              </div>
+              <div class="more">
+                <div class="buttons">
+                  <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Apply Now</a>
+                  <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+                </div>
+                <p class="deadline">Deadline: Oct 31, 2020</p>
+              </div>
+            </div>
+          </div>
+          <div class="job-list">
+            <div class="thumb">
+              <a href="#">
+                <img src="assets\images\job\company-logo-3.png" class="img-fluid" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <div class="content">
+                <h4><a href="job-details.html">Land Development Marketer</a></h4>
+                <div class="info">
+                  <span class="company"><a href="#"><i class="fas fa-briefcase"></i>Realouse</a></span>
+                  <span class="office-location"><a href="#"><i class="fas fa-map-pin"></i>Washington, D.C.</a></span>
+                  <span class="job-type freelance"><a href="#"><i class="far fa-clock"></i>Freelance</a></span>
+                </div>
+              </div>
+              <div class="more">
+                <div class="buttons">
+                  <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Apply Now</a>
+                  <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+                </div>
+                <p class="deadline">Deadline: Oct 31, 2020</p>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jobs End -->
+
+  <!-- App Download -->
+  <div class="padding-top-90 padding-bottom-90 app-download-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="app-download">
+            <h2>Get Oficiona App</h2>
+            <p>Searching for jobs never been that easy. Now you can find job matched your career expectation</p>
+            <div class="app-download-button">
+              <a href="#" class="apple-app">Apple Store</a>
+              <a href="#" class="android-app">Google Play</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- App Download End -->

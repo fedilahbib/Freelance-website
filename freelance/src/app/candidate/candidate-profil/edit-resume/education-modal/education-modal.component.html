@@ -1,0 +1,150 @@
+<!-- Modal -->
+<div
+  class="modal fade modal-education"
+  id="modal-education"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="title">
+          <h4><i class="fas fa-book"></i>Education</h4>
+          <a href="#" class="add-more">+ Add Education</a>
+        </div>
+        <div class="content">
+          <form
+            [formGroup]="educationForm"
+            (ngSubmit)="onClickSubmit(educationForm.value)"
+          >
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">01</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Title</div>
+                    </div>
+                    <input
+                      formControlName="title1"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Institute</div>
+                    </div>
+                    <input
+                      formControlName="institute1"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-9 offset-sm-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Period</div>
+                    </div>
+                    <input
+                      formControlName="period1"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Description</div>
+                    </div>
+                    <textarea
+                      formControlName="description1"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">02</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Title</div>
+                    </div>
+                    <input
+                      formControlName="title2"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Institute</div>
+                    </div>
+                    <input
+                      formControlName="institute2"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-9 offset-sm-3">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Period</div>
+                    </div>
+                    <input
+                      formControlName="period2"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Description</div>
+                    </div>
+                    <textarea
+                      formControlName="description2"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="buttons">
+                  <button class="primary-bg">Save Update</button>
+                  <button class="" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

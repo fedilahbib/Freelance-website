@@ -1,0 +1,45 @@
+<div class="dashboard-applied">
+  <h4 class="apply-title">06 Job Applied</h4>
+  <div class="dashboard-apply-area">
+    <div *ngFor="let job of jobList" class="job-list">
+      <div class="thumb">
+        <a href="#">
+          <img [src]="job.managerLogo" class="img-fluid" alt="" />
+        </a>
+      </div>
+      <div class="body">
+        <div class="content">
+          <h4>
+            <a href="#">{{ job.jobTitle }}</a>
+          </h4>
+          <div class="info">
+            <span class="company"
+              ><a href="#"><i class="fa fa-briefcase mr-1"></i>Degoin</a></span
+            >
+            <span class="office-location"
+              ><a href="#"
+                ><i class="fa fa-map-marker mr-1"></i>San Francisco</a
+              ></span
+            >
+            <span class="job-type part-time"
+              ><a href="#"
+                ><i class="fa fa-clock mr-1" [ngStyle]="{ color: 'red' }"></i
+                >Part Time</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="more">
+          <div class="buttons">
+            <a href="#" class="button">Apply Now</a>
+            <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+          </div>
+          <a (click)="markAsRead()" class="bookmark-remove"
+            ><i class="fas fa-times"></i
+          ></a>
+          <p class="deadline">Deadline: {{ job.deadline }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

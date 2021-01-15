@@ -1,0 +1,216 @@
+<div
+  class="modal fade"
+  id="modal-social"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="title">
+          <h4><i class="fas fa-code-branch"></i>Social Networks</h4>
+          <a href="#" class="add-more">+ Add Social</a>
+        </div>
+        <div class="content">
+          <form
+            [formGroup]="socialForm"
+            (ngSubmit)="onClickSubmit(socialForm.value)"
+          >
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Social Links</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-facebook-f"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="facebook"
+                    type="text"
+                    class="form-control"
+                    placeholder="facebook.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-twitter"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="twitter"
+                    type="text"
+                    class="form-control"
+                    placeholder="twitter.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-google-plus"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="google"
+                    type="text"
+                    class="form-control"
+                    placeholder="google.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-linkedin-in"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="linkedin"
+                    type="text"
+                    class="form-control"
+                    placeholder="linkedin.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-pinterest-p"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="pinterest"
+                    type="text"
+                    class="form-control"
+                    placeholder="pinterest.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-instagram"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="instagram"
+                    type="text"
+                    class="form-control"
+                    placeholder="instagram.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-behance"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="behance"
+                    type="text"
+                    class="form-control"
+                    placeholder="behance.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-dribbble"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="dribbble"
+                    type="text"
+                    class="form-control"
+                    placeholder="dribbble.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fab fa-github"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="github"
+                    type="text"
+                    class="form-control"
+                    placeholder="github.com/username"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text dropdown-label">
+                      <select
+                        class="form-control"
+                        id="exampleFormControlSelect1"
+                        (change)="changeSelect($event)"
+                        formControlName="select"
+                      >
+                        <option value="" disabled>Select</option>
+                        <option *ngFor="let sec of select" [ngValue]="sec">{{
+                          sec
+                        }}</option>
+                      </select>
+
+                      <i class="fa fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <input
+                    formControlName="profileLink"
+                    type="text"
+                    class="form-control"
+                    placeholder="Input Profile Link"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="buttons">
+                  <button class="primary-bg">Save Update</button>
+                  <button class="" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

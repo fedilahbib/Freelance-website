@@ -1,0 +1,104 @@
+<div
+  class="modal fade"
+  id="modal-qualification"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="title">
+          <h4><i class="fas fa-align-left"></i>Special Qualification</h4>
+          <a href="#" class="add-more">+ Add Another</a>
+        </div>
+        <div class="content">
+          <form
+            [formGroup]="qualificationForm"
+            (ngSubmit)="onClickSubmit(qualificationForm.value)"
+          >
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Type Here</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">01</div>
+                  </div>
+                  <input
+                    formControlName="typeHere1"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">02</div>
+                  </div>
+                  <input
+                    formControlName="typeHere2"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">03</div>
+                  </div>
+                  <input
+                    formControlName="typeHere3"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">04</div>
+                  </div>
+                  <input
+                    formControlName="typeHere4"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">05</div>
+                  </div>
+                  <input
+                    formControlName="typeHere5"
+                    type="text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="buttons">
+                  <button class="primary-bg">Save Update</button>
+                  <button class="" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

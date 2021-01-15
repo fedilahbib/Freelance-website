@@ -1,0 +1,5 @@
+
+<form [formGroup]="searchForm" (ngSubmit)="onClickSubmit(searchForm.value)">
+    <input type="text" placeholder="Enter Keywords"  formControlName="keywords">
+    <button><i data-feather="search"></i></button>
+  </form>

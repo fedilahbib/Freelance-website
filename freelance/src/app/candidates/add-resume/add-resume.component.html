@@ -1,0 +1,410 @@
+<!-- Breadcrumb -->
+<div class="alice-bg padding-top-70 padding-bottom-70">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="breadcrumb-area">
+          <h1>Add Resume</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add Resume</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="breadcrumb-form">
+          Enter Keywords
+          <!--
+ <form action="#">
+                  <input type="text" placeholder="Enter Keywords">
+                  <button><i data-feather="search"></i></button>
+                </form>
+
+                -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumb End -->
+
+<div class="alice-bg section-padding-bottom">
+  <div class="container no-gliters">
+    <div class="row no-gliters">
+      <div class="col">
+        <div class="post-container">
+          <div class="post-content-wrapper">
+
+            <form [formGroup]="addResumeForm" (ngSubmit)="onClickSubmit(applyJobForm.value)" class="job-post-form">
+              <div class="basic-info-input">
+                <h4><i data-feather="plus-circle"></i>Add Resume</h4>
+                <div id="full-name" class="form-group row">
+                  <label class="col-md-3 col-form-label">Full Name</label>
+                  <div class="col-md-9">
+                    <input formControlName="name" type="text" class="form-control" placeholder="Your Name">
+                  </div>
+                </div>
+                <div id="information" class="row">
+                  <label class="col-md-3 col-form-label">Information</label>
+                  <div class="col-md-9">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+
+                          <select class="form-control" (change)="selectCategory($event)" formControlName="Category">
+                            <option value="" disabled>Select Category</option>
+                            <option *ngFor="let c of category " [ngValue]="c">{{c}}</option>
+                          </select>
+
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="location" type="text" class="form-control"
+                            placeholder="Your Location">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+
+                          <select class="form-control" (change)="jobType($event)" formControlName="jobType">
+                            <option value="" disabled>job Type</option>
+                            <option *ngFor="let j of jobs " [ngValue]="j">{{j}}</option>
+                          </select>
+
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <select class="form-control" (change)="ExperienceOptional($event)"
+                            formControlName="experienceOptional">
+                            <option value="" disabled>Experience (Optional)</option>
+                            <option *ngFor="let exp of experience " [ngValue]="exp">{{exp}}</option>
+                          </select>
+
+
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="salaryRange" type="text" class="form-control"
+                            placeholder="Salary Range">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+
+
+                          <select class="form-control" (change)="qualification($event)" formControlName="qualification">
+                            <option value="" disabled>Qualification</option>
+                            <option *ngFor="let q of qualification " [ngValue]="q">{{q}}</option>
+                          </select>
+
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+
+
+                          <select class="form-control" (change)="Gender($event)" formControlName="gender">
+                            <option value="" disabled>Gender</option>
+                            <option *ngFor="let g of gender " [ngValue]="g">{{g}}</option>
+                          </select>
+
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="date1" type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group datepicker">
+                          <input formControlName="skill" type="text" class="form-control" placeholder="Your Skill">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="about" class="row">
+                  <label class="col-md-3 col-form-label">About You</label>
+                  <div class="col-md-9">
+                    <div class="form-group row">
+
+                      <textarea formControlName="aboutYou" class="form-control tinymce-editor-1"
+                        placeholder="Description text here"></textarea>
+                    </div>
+                  </div>
+
+                </div>
+                <div id="education" class="row">
+                  <label class="col-md-3 col-form-label">Education</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="designation" type="text" class="form-control" placeholder="Designation">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-md-3 col-form-label">EDUCATION 01</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="institute" type="text" class="form-control" placeholder="Institute">
+                    </div>
+                    <div class="form-group">
+                      <input formControlName="period" type="text" class="form-control" placeholder="Period">
+                    </div>
+
+                    <div class="form-group row">
+                      <textarea formControlName="descriptionEducation" class="form-control"
+                        placeholder="Description (Optional)"></textarea>
+                    </div>
+                    <a href="#" class="add-new-field">+ Add Education</a>
+                  </div>
+                </div>
+                <div id="experience" class="row">
+                  <label class="col-md-3 col-form-label">Work Experience</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="title" type="text" class="form-control" placeholder="Designation">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-md-3 col-form-label">Experience 01</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="companyExperience" type="text" class="form-control"
+                        placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                      <input formControlName="periodExperience" type="text" class="form-control" placeholder="Period">
+                    </div>
+                    <div class="form-group row">
+                      <textarea formControlName="descriptionExperience" class="form-control"
+                        placeholder="Description (Optional)"></textarea>
+                    </div>
+                    <a href="#" class="add-new-field">+ Add Experience</a>
+                  </div>
+                </div>
+                <div id="skill" class="row">
+                  <label class="col-md-3 col-form-label">Professional Skill</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="designationSkill" type="text" class="form-control"
+                        placeholder="Designation">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-md-3 col-form-label">SKILL 01</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="titleSkill" type="text" class="form-control" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                      <input formControlName="valueSkill" type="number" class="form-control"
+                        placeholder="value (Percen)">
+                    </div>
+                    <a href="#" class="add-new-field">+ Add Experience</a>
+                  </div>
+                </div>
+                <div id="qualification" class="row">
+                  <label class="col-md-3 col-form-label">Special Qualification</label>
+                  <div class="col-md-9">
+                    <div class="form-group row">
+
+                    <textarea formControlName="descriptionQualification" id="tiny" class="form-control tinymce-editor-2"
+                      placeholder="Description text here"></textarea>
+                    </div>
+
+                    </div>
+                </div>
+                <div id="portfolio" class="row">
+                  <label class="col-md-3 col-form-label">Portfolio</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input formControlName="titlePortfolio" type="text" class="form-control" placeholder="Title">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-md-3 col-form-label">PORTFOLIO 01</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">Image</div>
+                        </div>
+                        <div class="upload-portfolio-image">
+                          <div class="update-photo">
+                            <img class="image" src="images\portfolio\thumb-1.jpg" alt="">
+                          </div>
+                          <div class="file-upload">
+                            <input formControlName="portfolio" type="file" class="file-input">
+                            <i data-feather="plus"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input formControlName="portfolioLink" type="text" class="form-control"
+                        placeholder="Portfolio Link (Optional)">
+                    </div>
+                    <a href="#" class="add-new-field">+ Add Portfolio</a>
+                  </div>
+                </div>
+                <div id="cv" class="row form-group">
+                  <label class="col-md-3 col-form-label">Upload CV</label>
+                  <div class="col-md-9">
+                    <div class="add-cv">
+                      <input formControlName="uploadCloud" type="file">CV File<i data-feather="upload-cloud"></i>
+                    </div>
+                  </div>
+                </div>
+                <div id="cover" class="row">
+                  <label class="col-md-3 col-form-label">Cover Letter</label>
+                  <div class="col-md-9">
+                    <div class="form-group row">
+
+                    <textarea formControlName="uploadCover" class="form-control tinymce-editor-1"
+                      placeholder="Description text here"></textarea>
+                  </div>
+                </div>
+
+                </div>
+                <div id="profile" class="row">
+                  <label class="col-md-3 col-form-label">Social Profile</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text dropdown-label">
+
+                            <select class="form-control" (change)="socialProfile($event)"
+                              formControlName="socialProfile">
+                              <option value="" disabled>Select</option>
+                              <option *ngFor="let sp of socialProfile " [ngValue]="sp">{{sp}}</option>
+                            </select>
+
+                            <i class="fa fa-caret-down"></i>
+                          </div>
+                        </div>
+                        <input formControlName="inputProfileLink" type="text" class="form-control"
+                          id="inlineFormInputGroup" placeholder="Input Profile Link">
+                      </div>
+                    </div>
+                    <a href="#" class="add-new-field">+ Add Social</a>
+                  </div>
+                </div>
+                <div id="details" class="row">
+                  <label class="col-md-3 col-form-label">Personal Details</label>
+                  <div class="col-md-9">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="namePersonalDetails" type="text" class="form-control"
+                            placeholder="Your Name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="fatherNamepersonalDetails" type="text" class="form-control"
+                            placeholder="Father's Name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="motherName" type="text" class="form-control"
+                            placeholder="Mother's Name">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="input1" type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input formControlName="nationality" type="text" class="form-control"
+                            placeholder="Nationality">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+
+                          <select class="form-control" (change)="sex($event)" formControlName="sex">
+                            <option value="" disabled>Sex</option>
+                            <option *ngFor="let s of sexTab " [ngValue]="s">{{s}}</option>
+                          </select>
+
+
+                          <i class="fa fa-caret-down"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input formControlName="address" type="text" class="form-control" placeholder="Your Address">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-9 offset-md-3">
+                    <div class="form-group mt-0 terms">
+                      <input formControlName="termsandcondition" class="custom-radio" type="checkbox" id="radio-4"
+                        name="termsandcondition">
+                      <label for="radio-4">
+                        <span class="dot"></span> You accepts our <a href="#">Terms and Conditions</a> and <a
+                          href="#">Privacy Policy</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label"></label>
+                  <div class="col-md-9">
+                    <button class="button">Publish Resume</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="post-sidebar">
+            <h5><i data-feather="arrow-down-circle"></i>Navigation</h5>
+            <ul class="sidebar-menu">
+              <li><a href="#full-name">Full Name</a></li>
+              <li><a href="#information">Informations</a></li>
+              <li><a href="#about">About You</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#experience">Work Experiance</a></li>
+              <li><a href="#skill">Professional Skill</a></li>
+              <li><a href="#qualification">Special Qualification</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#cv">Upload CV</a></li>
+              <li><a href="#cover">Cover Letter</a></li>
+              <li><a href="#profile">Social Profile</a></li>
+              <li><a href="#details">Personal Details</a></li>
+            </ul>
+            <div class="signin-option">
+              <p>Have an Account ? Before submit job you need to sign in !</p>
+              <div class="buttons">
+                <a href="#" class="signin">Sign in</a>
+                <a href="#" class="register">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

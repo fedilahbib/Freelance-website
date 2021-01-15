@@ -1,0 +1,131 @@
+<div
+  class="modal fade"
+  id="modal-about-me"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="title">
+          <h4><i class="fas fa-align-left"></i>About Me</h4>
+        </div>
+        <div class="content">
+          <form
+            [formGroup]="aboutForm"
+            (ngSubmit)="onClickSubmit(aboutForm.value)"
+          >
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Write Yourself</label>
+              <div class="col-sm-9">
+                <textarea
+                  formControlName="writeYourself"
+                  class="form-control"
+                  placeholder="Write Yourself"
+                ></textarea>
+              </div>
+            </div>
+            <h4><i class="fas fa-align-left"></i>Information</h4>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Category</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="category"
+                  type="text"
+                  class="form-control"
+                  placeholder="Design &amp; Creative"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Location</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="location"
+                  type="text"
+                  class="form-control"
+                  placeholder="Los Angeles"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Status</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="status"
+                  type="text"
+                  class="form-control"
+                  placeholder="Full Time"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Experience</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="experience"
+                  type="text"
+                  class="form-control"
+                  placeholder="3 Year"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Salary Range</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="salaryRange"
+                  type="text"
+                  class="form-control"
+                  placeholder="30k - 40k"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Gender</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="gender"
+                  type="text"
+                  class="form-control"
+                  placeholder="Male"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Age</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="age"
+                  type="text"
+                  class="form-control"
+                  placeholder="25 Years"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Qualification</label>
+              <div class="col-sm-9">
+                <input
+                  formControlName="qualification"
+                  type="text"
+                  class="form-control"
+                  placeholder="Gradute"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="buttons">
+                  <button class="primary-bg">Save Update</button>
+                  <button class="" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

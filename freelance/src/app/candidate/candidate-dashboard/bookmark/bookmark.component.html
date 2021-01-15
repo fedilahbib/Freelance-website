@@ -1,0 +1,44 @@
+<div class="dashboard-bookmarked">
+  <h4 class="bookmark-title">06 Job Bookmarked</h4>
+  <div class="bookmark-area">
+    <div class="job-list" *ngFor="let Bookmarked of BookmarkedList">
+      <div class="thumb">
+        <a href="#">
+          <img [src]="Bookmarked.managerLogo" class="img-fluid" alt="" />
+        </a>
+      </div>
+      <div class="body">
+        <div class="content">
+          <h4>
+            <a href="job-details.html">{{ Bookmarked.jobTitle }}</a>
+          </h4>
+          <div class="info">
+            <span class="company"
+              ><a href="#"
+                ><i class="fas fa-briefcase mr-2"></i>Theoreo</a
+              ></span
+            >
+            <span class="office-location"
+              ><a href="#"
+                ><i class="fas fa-map-pin mr-2"></i>New York City</a
+              ></span
+            >
+            <span class="job-type full-time"
+              ><a href="#"><i class="fas fa-clock mr-2"></i>Full Time</a></span
+            >
+          </div>
+        </div>
+        <div class="more">
+          <div class="buttons">
+            <a href="#" class="button">Apply Now</a>
+            <a href="#" class="favourite"><i class="fas fa-heart"></i></a>
+          </div>
+          <a class="bookmark-remove"
+            ><i class="fas fa-times" (click)="markAsRead()"></i
+          ></a>
+          <p class="deadline">Deadline: {{ Bookmarked.deadline }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

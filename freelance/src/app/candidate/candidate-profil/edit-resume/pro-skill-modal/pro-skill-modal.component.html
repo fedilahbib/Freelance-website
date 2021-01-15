@@ -1,0 +1,173 @@
+<div
+  class="modal fade modal-pro-skill"
+  id="modal-pro-skill"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="title">
+          <h4><i class="fas fa-feather-alt"></i>Professional Skill</h4>
+          <a href="#" class="add-more">+ Add Skill</a>
+        </div>
+        <div class="content">
+          <form
+            [formGroup]="professionalSkillForm"
+            (ngSubmit)="onClickSubmit(professionalSkillForm.value)"
+          >
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">About Skill</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Description</div>
+                    </div>
+                    <textarea
+                      formControlName="descriptionProSki"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Skill 01</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Skill Name</div>
+                    </div>
+                    <input
+                      formControlName="nameProSki1"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Percentage</div>
+                    </div>
+                    <input
+                      formControlName="percentageProSki1"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Skill 02</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Skill Name</div>
+                    </div>
+                    <input
+                      formControlName="nameProSki2"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Percentage</div>
+                    </div>
+                    <input
+                      formControlName="percentageProSki2"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Skill 03</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Skill Name</div>
+                    </div>
+                    <input
+                      formControlName="nameProSki3"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Percentage</div>
+                    </div>
+                    <input
+                      formControlName="percentageProSki3"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-block-wrap">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Skill 04</label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Skill Name</div>
+                    </div>
+                    <input
+                      formControlName="nameProSki4"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">Percentage</div>
+                    </div>
+                    <input
+                      formControlName="percentageProSki4"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-sm-3 col-sm-9">
+                <div class="buttons">
+                  <button class="primary-bg">Save Update</button>
+                  <button class="" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
